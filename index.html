@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <script src="index.js"></script>
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Simples</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <script src="./main.js"></script> -->
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Quiz Simples</h1>
+      <p id="question"></p>
+      <div class="options">
+        <button id="startButton" onclick="startQuiz()">Iniciar</button>
+        <button style="display: none" id="submitButton" onclick="checkAnswer()">
+          Responder
+        </button>
+      </div>
+      <p id="result"></p>
+    </div>
+    <script>
+      var questions = [
+        {
+          question: "Qual é a capital da França?",
+          answer: "paris",
+        },
+        {
+          question: "Qual é o maior planeta do sistema solar?",
+          answer: "jupiter",
+        },
+        {
+          question: "Quantos continentes existem?",
+          answer: "7",
+        },
+        {
+          question: "Quem escreveu a peça 'Romeu e Julieta'?",
+          answer: "shakespeare",
+        },
+      ];
+
+      var currentQuestionIndex = 0;
+      var resultElement = document.getElementById("result");
+      var questionElement = document.getElementById("question");
+      var startButton = document.getElementById("startButton");
+      var submitButton = document.getElementById("submitButton");
+
+      function displayQuestion() {
+        questionElement.textContent = questions[currentQuestionIndex].question;
+        submitButton.style.display = "block";
+        startButton.style.display = "none";
+      }
+
+      function startQuiz() {
+        currentQuestionIndex = 0;
+        resultElement.textContent = "";
+        displayQuestion();
+      }
+
+      function checkAnswer() {
+        var userAnswer = prompt("Digite a resposta:").toLowerCase();
+
+        if (userAnswer === questions[currentQuestionIndex].answer) {
+          resultElement.textContent = "Resposta correta!";
+          resultElement.style.color = "green";
+          currentQuestionIndex++;
+
+          if (currentQuestionIndex < questions.length) {
+            setTimeout(displayQuestion, 1000); // Espera 1 segundo para mostrar a próxima pergunta
+          } else {
+            questionElement.textContent = "Fim do Quiz!";
+            submitButton.style.display = "none";
+            startButton.style.display = "block";
+          }
+        } else {
+          resultElement.textContent = "Resposta incorreta! Tente novamente.";
+          resultElement.style.color = "red";
+          currentQuestionIndex = 0; // Reinicia o índice para a primeira pergunta
+          setTimeout(displayQuestion, 1000); // Espera 1 segundo para mostrar a primeira pergunta novamente
+        }
+      }
+    </script>
+  </body>
 </html>

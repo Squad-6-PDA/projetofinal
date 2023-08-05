@@ -48,7 +48,7 @@ function displayQuestion() {
 
   var alternativesHTML = '';
   questions[currentQuestionIndex].alternatives.forEach(function (alternative, index) {
-    alternativesHTML += `<br><input type="radio" name="answer" value="${index}">${alternative.text}<br>`;
+    alternativesHTML += `<input type="radio" name="answer" class="menuDeOpções" value="${index}">${alternative.text}<br>`;
   });
 
   alternativesHTML += '<br>';

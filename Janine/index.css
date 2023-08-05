@@ -70,3 +70,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .menuDeOpções{
+    display:block;
+    margin-top: 3rem;
+  }

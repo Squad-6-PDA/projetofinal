@@ -70,6 +70,7 @@ function checkAnswer() {
   if (!selectedAlternativeIndex) {
     // Caso o usuário não tenha selecionado nenhuma alternativa
     resultElement.textContent = "Selecione uma resposta!";
+    resultElement.style.fontSize = "40px";
     resultElement.style.color = "red";
     return; // Encerra a função sem avançar para a próxima pergunta
   }
@@ -79,10 +80,12 @@ function checkAnswer() {
 
   if (selectedAlternative.answer) {
     resultElement.textContent = "Resposta correta!";
+    resultElement.style.fontSize = "40px";
     resultElement.style.color = "green";
   } else {
     resultElement.textContent = "Resposta incorreta! Fim do Quiz.";
     resultElement.style.color = "red";
+    resultElement.style.fontSize = "40px";
     questionElement.innerHTML = '<button onclick="startQuiz()">Reiniciar Quiz</button>';
     submitButton.style.display = "none";
     startButton.style.display = "block";

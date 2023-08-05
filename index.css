@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+*{
+  font-family: 'Teko', sans-serif;
+}
+  .quiz-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  h1 {
+    font-size: 60px;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  button {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  #result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #startButton {
+    background-color: #4CAF50;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+  
+  #submitButton {
+    display: none;
+  }
+
+  #question{
+    gap: .8rem;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
+  .menuDeOpções{
+    display:block;
+    margin-top: 3rem;
+    margin: auto;
+  }

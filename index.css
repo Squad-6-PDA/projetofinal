@@ -16,7 +16,7 @@ body {
     text-align: center;
     margin: 50px auto;
     max-width: 50%;
-    background-color: #232451;
+    background-color: #2a2b65;
     box-shadow: 0px 0px 20px 7px #000;
     padding: 20px;
     border-radius: 30px;
@@ -35,6 +35,10 @@ body {
     width: 100%;
   }
 
+#imgTitulo{
+  width:30%;
+  margin-bottom: 3rem;
+}
 
   button {
     box-shadow: 0px 0px 7px 2px #000;
@@ -87,6 +91,55 @@ body {
   }
   .menuDeOpções{
     display:block;
-    margin-top: 3rem;
-    margin: auto;
+    margin: 0;
+  }
+
+  /* Estilo padrão para input radio */
+  input[type="radio"] {
+    opacity: 0; /* Esconder o input padrão */
+    position: absolute;
+    cursor: pointer;
+  }
+
+  /* Estilizando o estilo do input radio personalizado */
+  .quiz-container {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  /* Estilizando o indicador do input radio personalizado */
+  .quiz-container label {
+    position: relative;
+    padding-left: 30px; /* Espaçamento para a aparência do radio button */
+    cursor: pointer;
+  }
+
+  .quiz-container label:before {
+    content: "";
+    margin-right: 0px;
+    margin-top: 6px;
+    position: absolute;
+    left: 0; 
+    right: 50px;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff; /* Cor da borda do radio button */
+    border-radius: 50%; /* Transformando em um círculo */
+  }
+
+  /* Estilo quando o input radio está marcado */
+  input[type="radio"]:checked + label:before {
+    background-color: #000; /* Cor de fundo do círculo quando selecionado */
+  }
+
+  /* Estilo quando o input radio está desabilitado */
+  input[type="radio"]:disabled + label {
+    color: #999; /* Cor do texto quando desabilitado */
+    cursor: not-allowed;
+  }
+
+  input[type="radio"]:disabled + label:before {
+    border-color: #999; /* Cor da borda quando desabilitado */
+    background-color: #ddd; /* Cor de fundo do círculo quando desabilitado */
   }

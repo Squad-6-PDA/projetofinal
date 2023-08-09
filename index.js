@@ -1,3 +1,5 @@
+var nomeUsuario =prompt("Bem Vindo ao QUIZ!! Digite aqui o seu nome")
+
 var questions = [
   {
     question: "Em que ano foi eleito o primeiro presidente negro nos Estados Unidos?",
@@ -48,7 +50,26 @@ function displayQuestion() {
 
   var alternativesHTML = '';
   questions[currentQuestionIndex].alternatives.forEach(function (alternative, index) {
-    alternativesHTML += `<input type="radio" name="answer" class="menuDeOpções" value="${index}">${alternative.text}<br>`;
+    alternativesHTML += `<div
+    style="
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    "
+  >
+    <input
+      type="radio"
+      name="answer"
+      id="${alternative.text}"
+      class="menuDeOpções"
+      value="${index}"
+      style="display: block;"
+    />
+    <label for="${alternative.text}" style="display: block">${alternative.text}</label>
+  </div>`;
   });
 
   alternativesHTML += '<br>';
@@ -98,7 +119,7 @@ function checkAnswer() {
       currentQuestionIndex++;
       displayQuestion();
     } else {
-      questionElement.textContent = "Fim do Quiz!";
+      questionElement.textContent = "Parabéns " + nomeUsuario + ", fim do Quiz!";
       questionElement.innerHTML += '<br><button onclick="startQuiz()">Reiniciar Quiz</button>';
       submitButton.style.display = "none";
       startButton.style.display = "block";

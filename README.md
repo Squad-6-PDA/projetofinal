@@ -9,10 +9,10 @@ Quiz de conhecimentos gerais, baseado em em fatos históricos
 <img height="110em"  width="120em" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" />
 
 # Autores
-Moises,
-Janine Cruz,
-Simeone Johnson,
-Maria Francielly,
-Oziel Sousa,
+- Moises,
+- Janine Cruz,
+- Simeone Johnson,
+- Maria Francielly,
+- Oziel Sousa,
 
 

@@ -13,6 +13,6 @@ Quiz de conhecimentos gerais, baseado em em fatos históricos
 - Janine Cruz,
 - Simeone Johnson,
 - Maria Francielly,
-- Oziel Sousa,
+- Oziel Sousa.
 
 
